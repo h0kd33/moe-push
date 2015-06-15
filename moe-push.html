@@ -10,11 +10,11 @@
     }
     </style>
     <template>
-        <div id="push" kaomonji="{{kaomonji}}" identity="{{identity}}" ip="{{ip}}" date="{{date}}" time="{{time}}">
-            <span id="kaomonji">{{kaomonji}}</span>
+        <div id="push" kaomonji="[[kaomonji]]" identity="[[identity]]" ip="[[ip]]" date="[[date]]" time="[[time]]">
+            <span id="kaomonji">[[kaomonji]]</span>
             <content></content>
-            <span id="postInfo">{{postInfo}}</span>
-            <span id="ip">{{ip}}</span>
+            <span id="postInfo">[[postInfo]]</span>
+            <span id="ip">[[ip]]</span>
         </div>
     </template>
 </dom-module>
@@ -36,33 +36,6 @@ Polymer({
     },
     computePostInfo: function(identity, date, time) {
         return '(' + identity + ' ' + date + ' ' + time + ')';
-    },
-
-    // Element Lifecycle
-
-    ready: function() {
-        // `ready` is called after all elements have been configured, but
-        // propagates bottom-up. This element's children are ready, but parents
-        // are not.
-        //
-        // This is the point where you should make modifications to the DOM (when
-        // necessary), or kick off any processes the element wants to perform.
-    },
-
-    attached: function() {
-        // `attached` fires once the element and its parents have been inserted
-        // into a document.
-        //
-        // This is a good place to perform any work related to your element's
-        // visual state or active behavior (measuring sizes, beginning animations,
-        // loading resources, etc).
-    },
-
-    detached: function() {
-        // The analog to `attached`, `detached` fires when the element has been
-        // removed from a document.
-        //
-        // Use this to clean up anything you did in `attached`.
     }
 });
 </script>
